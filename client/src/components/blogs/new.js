@@ -17,7 +17,7 @@ function New() {
       }
     })
       .then(resp => setRedirect(true))
-      .catch(err => console.log(err));
+      .catch(err => console.error(err));
   }
 
   function handleInputChange(event) {

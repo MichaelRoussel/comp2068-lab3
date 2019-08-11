@@ -2,7 +2,6 @@ const Blog = require("../models/blog");
 
 exports.index = (req, res) => {
   Blog.find()
-    .published()
     .populate("author")
     .then(blogs => res.json(blogs))
     .catch(err => res.status(404).send(err));
@@ -12,7 +11,6 @@ exports.show = (req, res) => {
   Blog.findOne({
     _id: req.params.id
   })
-    .published()
     .then(blog => res.json(blog))
     .catch(err => res.status(401).send(err));
 };

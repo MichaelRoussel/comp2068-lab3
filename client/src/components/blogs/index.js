@@ -40,8 +40,8 @@ function Index() {
                   {blog.author && blog.author.lastName}
                 </td>
                 <td>
-                  <Link to={`/blogs/${blog._id}/edit`}>edit</Link>|
-                  <Link to={`/blogs/${blog._id}/destroy`}>delete</Link>
+                  <Link to={`/blogs/${blog._id}/edit`}>edit </Link>|
+                  <Link to={`/blogs/${blog._id}/destroy`}> delete</Link>
                 </td>
               </tr>
             ))}
